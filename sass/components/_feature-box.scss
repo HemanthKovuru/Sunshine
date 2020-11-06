@@ -1,0 +1,17 @@
+.feature-box {
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+}
+
+.icon-big {
+    display: block;
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

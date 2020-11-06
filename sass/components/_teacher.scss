@@ -1,0 +1,72 @@
+.teacher {
+
+    position: relative;
+
+    &__img {
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0 3rem 4rem rgba($color-black, .15);
+        transition: all .4s;
+        transform: scale(1.02);
+        
+        
+    }
+
+    &:hover &__img {
+        filter: blur(3px) brightness(80%);
+        transform: scale(.95);
+    }
+
+    &__name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        font-size: 2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: all .4s;
+        text-align: center;
+    }
+
+    &:hover &__name {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    @include respond(tab-land) {
+
+        &__img {
+            width: 70%;
+            border-radius: 3px;
+            box-shadow: 0 3rem 4rem rgba($color-black, .15);   
+            position: relative;
+        }
+
+        &__name {
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            opacity: 1;
+            background-image: linear-gradient($color-primary-light, $color-primary-dark);
+            padding: 1rem 2rem;
+        }
+
+    }
+    @include respond(phone) {
+
+        &__img {
+            width: 100%;
+        
+        }
+
+        &__name {
+            width: 100%;
+            padding: 0;
+        }
+
+    }
+
+}

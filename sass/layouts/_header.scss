@@ -1,0 +1,40 @@
+.header {
+    background-image: linear-gradient(to right bottom, 
+    rgba($color-primary-light, .7), 
+    rgba($color-primary-dark, .7)), 
+    url(../imgs/hero-min.jpg);
+
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+
+        @include respond(phone) {
+            top: 4rem;
+            left: 4rem;
+        }
+    }
+
+    &__logo {
+        width: 10rem;
+        height: 10rem;
+
+        @include respond(phone) {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

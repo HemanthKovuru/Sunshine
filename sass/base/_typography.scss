@@ -1,0 +1,107 @@
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: $color-grey-dark;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    text-align: center;
+    backface-visibility: hidden;
+
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 7rem;
+    font-weight: 100;
+    letter-spacing: 4rem;
+    animation: moveMainSpace 2s ease-in-out;
+
+    @include respond(phone) {
+        // font-size: 6rem;
+        letter-spacing: 3rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 5.1rem;
+    }
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2.8rem;
+    animation: moveSubSpace 1s ease-out 1.8s;
+    animation-fill-mode: backwards;
+    backface-visibility: hidden;
+    
+    
+    @include respond(phone) {
+        letter-spacing: 2.3rem;
+    }
+
+    @include respond(small-phone) {
+        letter-spacing: 1.8rem;
+    }
+
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 4px;
+    background-image:  linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    transition: all .3s;
+
+    @include respond(phone) {
+        font-size: 2.2rem;
+    }
+
+
+
+    &:hover {
+        letter-spacing: 1.5rem;
+        text-shadow: 0 0 3rem rgba($color-black, .5);
+        transform: scale(1.05);
+    }
+}
+
+.extra:hover {
+    letter-spacing: 1rem;
+
+    @include respond(phone) {
+        letter-spacing: 1px;
+        font-size: 1rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+.long-copy {
+    font-size: 1.6rem;
+    max-width: 70%;
+    margin: 0 auto;
+}

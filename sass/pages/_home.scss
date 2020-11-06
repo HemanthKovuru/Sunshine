@@ -1,0 +1,46 @@
+.section-features {
+    padding: 6.5rem 0;
+    background-color: $color-grey-light-2;
+}
+
+.section-about {
+    padding: 6.5rem 0;
+    background-color: $color-grey-light-1;
+    
+}
+
+.section-classes {
+    background-color: $color-grey-light-2;
+    padding: 6.5rem 0;
+}
+
+.section-teachers {
+    background-color: $color-grey-light-1;
+    padding: 6.5rem 0;
+}
+
+.section-stories {
+    background-color: $color-grey-light-2;
+    padding: 6.5rem 0;
+}
+
+.section-demo {
+    background-color: $color-grey-light-1;
+    padding: 6.5rem 0;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../imgs/ss-25-min.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.form-box {
+    padding: 5rem 0;
+    width: 60%;
+    margin: 0 auto;
+    background-color: $color-grey-light-2;
+    border-radius: 4px;
+    box-shadow: 0 2rem 3rem rgba($color-black, .2);
+
+    @include respond(phone) {
+        width: 100%;
+    }
+}

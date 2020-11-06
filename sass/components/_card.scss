@@ -1,0 +1,165 @@
+.card {
+
+    height: 25rem;
+    -moz-perspective: 90rem;
+    perspective: 90rem;
+    position: relative;
+
+    &__side {
+        width: 100%;
+        height: 25rem;
+        font-size: 2rem;
+        transition: all 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        overflow: hidden;
+
+        &__front {
+            background-color: $color-grey-light-2;
+    
+        }
+        &__back {
+                      
+            transform: rotateY(180deg);
+
+            &--1 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);  
+            }
+
+            &--2 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);  
+            }
+
+            &--3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);  
+            }
+
+            &--4 {
+                background-image: linear-gradient(to right bottom, $color-quaternary-light, $color-quaternary-dark);  
+            }
+
+            &--5 {
+                background-image: linear-gradient(to right bottom, $color-quinary-light, $color-quinary-dark);  
+            }
+
+            &--6 {
+                background-image: linear-gradient(to right bottom, $color-senary-light, $color-senary-dark);  
+            }
+        }
+    }
+
+    &:hover &__side__front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side__back {
+        transform: rotateY(0);
+    }
+
+
+    &__picture {
+        height: 15rem;
+        
+        background-size: 100%;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../imgs/ss-5-min.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8)), url(../imgs/ss-6-min.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8)), url(../imgs/ss-7-min.jpg);
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom, rgba($color-quaternary-light, .8), rgba($color-quaternary-dark, .8)), url(../imgs/ss-8-min.jpg);
+        }
+
+        &--5 {
+            background-image: linear-gradient(to right bottom, rgba($color-quinary-light, .8), rgba($color-quinary-dark, .8)), url(../imgs/ss-9-min.jpg);
+        }
+
+        &--6 {
+            background-image: linear-gradient(to right bottom, rgba($color-senary-light, .8), rgba($color-senary-dark, .8)), url(../imgs/ss-10-min.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2rem;
+        text-transform: uppercase;
+        position: absolute;
+        color: $color-grey-light-2;
+        text-align: center;
+        font-weight: 300;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    &__details {
+        font-size: 1.5rem;
+
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 1.3rem;
+        }
+
+        li {
+            padding: .5rem;
+        }
+    }
+
+    @include respond(tab-land) {
+        height: auto;
+
+        &__side {
+            width: 80%;
+            margin-left: 10%;
+            position: relative;
+
+
+            &__front {
+                background-color: $color-grey-light-2;
+        
+            }
+            &__back {
+                
+                &:not(:last-child) {
+                    margin-bottom: 5rem;
+                }
+                transform: rotateY(0);
+                
+                height: 12rem;
+
+            
+            }
+        }
+
+        &:hover &__side__front {
+            transform: rotateY(0);
+        }
+
+        &:hover &__side__back {
+            transform: rotateY(0);
+        }
+    }
+
+    @include respond(phone) {
+        &__side {
+            margin: 0;
+            width: 100%;
+
+        }
+    }
+
+
+}
